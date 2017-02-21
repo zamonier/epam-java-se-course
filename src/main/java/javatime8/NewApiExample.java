@@ -2,6 +2,8 @@ package javatime8;
 
 import java.time.Duration;
 import java.time.Instant;
+import java.time.ZoneId;
+import java.util.TreeSet;
 
 /**
  * Created by Eugene on 21.02.17.
@@ -16,6 +18,8 @@ public class NewApiExample {
             Instant instant = start.plusMillis(100);
             Duration timeElapsed = Duration.between(start, end);
             System.out.println(timeElapsed.toMillis());
+
+            System.out.println(new TreeSet(ZoneId.getAvailableZoneIds()));
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

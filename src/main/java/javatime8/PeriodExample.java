@@ -2,6 +2,8 @@ package javatime8;
 
 import java.time.LocalDate;
 import java.time.Period;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 
 import static java.time.Period.between;
 
@@ -19,6 +21,12 @@ public class PeriodExample {
                         + period.getDays() + " days before Programmers Day!");
         System.out.println(period);
 
-        now.
+        ZonedDateTime apollo11launch = ZonedDateTime.of(
+                1969, 7, 16, 9, 32, 0, 0, ZoneId.of("America/New_York"));
+
+        System.out.println(apollo11launch.getZone());
+        System.out.println(ZoneId.systemDefault());
+
+
     }
 }
