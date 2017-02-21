@@ -1,5 +1,6 @@
 package javatime8;
 
+import java.sql.Date;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.ZoneId;
@@ -26,7 +27,6 @@ public class PeriodExample {
 
         System.out.println(apollo11launch.getZone());
         System.out.println(ZoneId.systemDefault());
-
 
     }
 }
