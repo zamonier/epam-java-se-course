@@ -13,6 +13,7 @@ public class NewApiExample {
             Instant start = Instant.now();
             Thread.sleep(2000);
             Instant end = Instant.now();
+            Instant instant = start.plusMillis(100);
             Duration timeElapsed = Duration.between(start, end);
             System.out.println(timeElapsed.toMillis());
         } catch (InterruptedException e) {
