@@ -24,7 +24,6 @@ public class PeriodExample {
 
         ZonedDateTime apollo11launch = ZonedDateTime.of(
                 1969, 7, 16, 9, 32, 0, 0, ZoneId.of("America/New_York"));
-
         System.out.println(apollo11launch.getZone());
         System.out.println(ZoneId.systemDefault());
 
