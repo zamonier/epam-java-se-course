@@ -33,8 +33,8 @@ public class ThreadDemo {
 
     public static void main(String[] args) throws InterruptedException {
         Talk talk = new Talk();
-        Thread walk = new Thread(new Walk());
-        new Walk().run();
+        Thread walk = new Thread(() -> System.out.println(111));
+//        new Walk().run();
         talk.start();
         Thread.sleep(3000);
         walk.start();
