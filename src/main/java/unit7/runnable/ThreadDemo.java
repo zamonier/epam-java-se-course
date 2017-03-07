@@ -8,6 +8,7 @@ public class ThreadDemo {
                 System.out.println("Walking");
                 try {
                     Thread.sleep(400);
+                    System.exit(1);
                     throw new RuntimeException();
                 } catch (InterruptedException e) {
                     System.err.println(e);
@@ -33,13 +34,16 @@ public class ThreadDemo {
 
     public static void main(String[] args) throws InterruptedException {
         Talk talk = new Talk();
-        Thread walk = new Thread(() -> System.out.println(111));
+        Thread walk = new Thread(() -> {
+            System.out.println(111);
+        });
+        talk.setDaemon(true);
 //        new Walk().run();
         talk.start();
         Thread.sleep(3000);
         walk.start();
-        Talk talk2 = new Talk();
-        talk2.start();
+//        Talk talk2 = new Talk();
+//        talk2.start();
         throw new RuntimeException();
     }
 }

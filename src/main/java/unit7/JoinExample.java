@@ -24,5 +24,6 @@ public class JoinExample {
 
 
         System.out.println(t1.getState());
+        t1.interrupt();
     }
 }
