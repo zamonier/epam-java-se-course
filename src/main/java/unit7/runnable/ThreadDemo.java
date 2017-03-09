@@ -34,6 +34,7 @@ public class ThreadDemo {
 
     public static void main(String[] args) throws InterruptedException {
         Talk talk = new Talk();
+        Thread.currentThread().setDaemon(true);
         Thread walk = new Thread(() -> {
             System.out.println(111);
         });
@@ -44,6 +45,7 @@ public class ThreadDemo {
         walk.start();
 //        Talk talk2 = new Talk();
 //        talk2.start();
+        System.out.println(Thread.currentThread().getName());
         throw new RuntimeException();
     }
 }
