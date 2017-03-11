@@ -18,7 +18,6 @@ public class Main {
         opD.join();
         opW.join();
         System.out.println(System.currentTimeMillis() - l + ": " + account);
-
     }
 
 }
