@@ -1,13 +1,9 @@
 package unit6;
 
-import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.function.Function;
 
-/**
- * Created by Eugene on 18.03.17.
- */
 public class QueueExample {
 
     public static void main(String[] args) {
