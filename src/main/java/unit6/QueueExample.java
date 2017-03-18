@@ -20,7 +20,6 @@ public class QueueExample {
         }
     }
 
-
     private static Queue<String> getQueue(Class<? extends Queue> cl) {
         try {
             Queue<String> q = cl.newInstance();
