@@ -21,7 +21,7 @@ public class QueueExample {
     }
 
 
-    public static Queue<String> getQueue(Class<? extends Queue> cl) {
+    private static Queue<String> getQueue(Class<? extends Queue> cl) {
         try {
             Queue<String> q = (Queue<String>) cl.newInstance();
             q.offer("Oklahoma");
