@@ -11,7 +11,6 @@ public class QueueExample {
         queueApply(getQueue(LinkedList.class), Queue::poll);
 
         queueApply(getQueue(LinkedList.class), Queue::remove);
-
     }
 
     private static void queueApply(Queue<String> queue, Function<Queue<String>, String> function) {
