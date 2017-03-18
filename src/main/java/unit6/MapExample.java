@@ -1,13 +1,13 @@
 package unit6;
 
-import java.util.HashMap;
-import java.util.IdentityHashMap;
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
 
 public class MapExample {
 
     public static void main(String[] args) {
+
+        ArrayList<A> as = new ArrayList<>();
+        Collections.min(as);
 
         Map<Person, Address> map = new IdentityHashMap<>();
 
@@ -16,6 +16,13 @@ public class MapExample {
         map.put(key, new Address("Энергетиков 36А"));
 
         System.out.println(map.get(key2));
+    }
+
+    private static class A implements Comparable{
+        @Override
+        public int compareTo(Object o) {
+            return 0;
+        }
     }
 
     private static class Address {
