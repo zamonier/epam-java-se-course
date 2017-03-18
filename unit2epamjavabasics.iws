@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4454b684-3ba8-4433-9118-e0c70fc89f9e" name="Default" comment="iterator">
+    <list default="true" id="4454b684-3ba8-4433-9118-e0c70fc89f9e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/unit6/QueueExample.java" afterPath="$PROJECT_DIR$/src/main/java/unit6/QueueExample.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/unit2epamjavabasics.iws" afterPath="$PROJECT_DIR$/unit2epamjavabasics.iws" />
     </list>
@@ -31,8 +31,8 @@
       <file leaf-file-name="QueueExample.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/unit6/QueueExample.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="609">
-              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state relative-caret-position="725">
+              <caret line="25" column="30" lean-forward="false" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -3596,8 +3596,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/unit6/QueueExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state relative-caret-position="725">
+          <caret line="25" column="30" lean-forward="false" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

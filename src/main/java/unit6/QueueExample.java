@@ -23,7 +23,7 @@ public class QueueExample {
 
     private static Queue<String> getQueue(Class<? extends Queue> cl) {
         try {
-            Queue<String> q = (Queue<String>) cl.newInstance();
+            Queue<String> q = cl.newInstance();
             q.offer("Oklahoma");
             q.offer("Indiana");
             q.offer("Georgia");
