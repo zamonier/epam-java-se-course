@@ -1,16 +1,29 @@
 package unit6;
 
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 import java.util.function.Function;
+import java.util.function.Supplier;
 
 public class QueueExample {
 
     public static void main(String[] args) {
 
-        queueApply(getQueue(LinkedList.class), Queue::poll);
+        queueApply(createFilledQueue(LinkedList<String>::new), Queue::poll);
+        queueApply(createFilledQueue(LinkedList<String>::new), Queue::remove);
+        queueApply(createFilledQueue(ArrayDeque<String>::new), Queue::poll);
+        queueApply(createFilledQueue(ArrayDeque<String>::new), Queue::remove);
+        queueApply(createFilledQueue(PriorityQueue<String>::new), Queue::poll);
+        queueApply(createFilledQueue(PriorityQueue<String>::new), Queue::remove);
 
-        queueApply(getQueue(LinkedList.class), Queue::remove);
+        queueApply(
+                createFilledQueue(
+                        () -> new PriorityQueue<>(10, Collections.reverseOrder())),
+                Queue::poll);
+        queueApply(
+                createFilledQueue(
+                        () -> new PriorityQueue<>(10, Collections.reverseOrder())),
+                Queue::remove);
+
     }
 
     private static void queueApply(Queue<String> queue, Function<Queue<String>, String> function) {
@@ -20,17 +33,13 @@ public class QueueExample {
         }
     }
 
-    private static Queue<String> getQueue(Class<? extends Queue> cl) {
-        try {
-            Queue<String> q = cl.newInstance();
-            q.offer("Oklahoma");
-            q.offer("Indiana");
-            q.offer("Georgia");
-            q.offer("Texas");
-            return q;
-        } catch (InstantiationException | IllegalAccessException e) {
-            e.printStackTrace();
-        }
-        throw new IllegalArgumentException();
+    private static Queue<String> createFilledQueue(Supplier<? extends Queue<String>> s) {
+        Queue<String> q = s.get();
+        q.offer("Oklahoma");
+        q.offer("Indiana");
+        q.offer("Georgia");
+        q.offer("Texas");
+        return q;
     }
+
 }
